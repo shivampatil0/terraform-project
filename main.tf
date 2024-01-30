@@ -4,7 +4,7 @@ region = "ap-southeast-1"
 }
 
 resource "aws_instance" "one" {
-  ami             = "ami-09eb2ed0e9c2f6126 "
+  ami             = "ami-0e75e9888b89c15e1 "
   instance_type   = "t2.micro"
   key_name        = "devopsbyshivam"
   vpc_security_group_ids = [aws_security_group.five.id]
@@ -23,7 +23,7 @@ EOF
 }
 
 resource "aws_instance" "two" {
-  ami             = "ami-09eb2ed0e9c2f6126 "
+  ami             = "ami-0e75e9888b89c15e1"
   instance_type   = "t2.micro"
   key_name        = "devopsbyshivam"
   vpc_security_group_ids = [aws_security_group.five.id]
@@ -42,7 +42,7 @@ EOF
 }
 
 resource "aws_instance" "three" {
-  ami             = "ami-09eb2ed0e9c2f6126 "
+  ami             = "ami-0e75e9888b89c15e1"
   instance_type   = "t2.micro"
   key_name        = "devopsbyshivam"
   vpc_security_group_ids = [aws_security_group.five.id]
@@ -53,7 +53,7 @@ resource "aws_instance" "three" {
 }
 
 resource "aws_instance" "four" {
-  ami             = "ami-09eb2ed0e9c2f6126 "
+  ami             = "ami-0e75e9888b89c15e1"
   instance_type   = "t2.micro"
   key_name        = "devopsbyshivam"
   vpc_security_group_ids = [aws_security_group.five.id]
@@ -64,7 +64,7 @@ resource "aws_instance" "four" {
 }
 
 resource "aws_security_group" "five" {
-  name = "elb-sg"
+  name = "elb-sgg"
   ingress {
     from_port   = 22
     to_port     = 22
@@ -88,7 +88,7 @@ resource "aws_security_group" "five" {
 }
 
 resource "aws_s3_bucket" "six" {
-  bucket = "devopsbyrahamterraserverbucket9988oo9988"
+  bucket = "devopsbyshivamterraserverbucket9988oo9988"
 }
 
 resource "aws_iam_user" "seven" {
@@ -99,13 +99,13 @@ name = each.value
 variable "user_names" {
 description = "*"
 type = set(string)
-default = ["user1", "user2", "user3", "user4"]
+default = ["user8", "user5", "user6", "user7"]
 }
 
 resource "aws_ebs_volume" "eight" {
  availability_zone = "ap-southeast-1a"
   size = 40
   tags = {
-    Name = "ebs-001"
+    Name = "ebs-002"
   }
 }
